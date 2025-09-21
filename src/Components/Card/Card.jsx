@@ -158,7 +158,7 @@ const Card = () => {
             </div>
           </div>
 
-          {/* Card 3 */}
+          
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
             <a
               href="https://port-iqra-yasmeens-projects.vercel.app/"
@@ -182,7 +182,7 @@ const Card = () => {
             </div>
           </div>
 
-          {/* Card 4 */}
+         
           <div className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
             <a
               href="https://iqra-co.github.io/portfolio/"
