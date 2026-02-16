@@ -4,7 +4,7 @@ import { HiPhone, HiLocationMarker, HiOutlineLink } from "react-icons/hi";
 function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 body-font">
-      <div className="container mx-auto py-12 px-5 flex flex-col md:flex-row md:justify-between items-center">
+      <div className="container mx-auto py-1 px-1 flex flex-col md:flex-row md:justify-between items-center">
         
         {/* Name & Description */}
         <div className="text-center md:text-left mb-6 md:mb-0">

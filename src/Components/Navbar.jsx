@@ -1,6 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
+
 function Navbar() {
+  const handleDownload = () => {
+    const link = document.createElement("a");
+    link.href = "/iqra_20260115_205004_0000.pdf";
+    link.download = "iqra_20260115_205004_0000.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <header className="text-gray-600 body-font shadow-md bg-white">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
@@ -28,16 +37,16 @@ function Navbar() {
         {/* Navigation Links */}
         <nav className="md:ml-auto flex flex-wrap items-center text-lg justify-center">
           <Link to="/" className="mr-8 text-blue-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer">Home</Link>
-          <Link to ="about"className="mr-8 text-blue-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer">About</Link>
+          <Link to ="/about"className="mr-8 text-blue-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer">About</Link>
           {/* <Link to ="" className="mr-8 text-gray-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer">Projects</Link> */}
-          <Link to ="contact"className="mr-8 text-blue-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer">Contact</Link>
+          <Link to ="/contact"className="mr-8 text-blue-700 hover:text-indigo-600 transition-colors duration-300 cursor-pointer">Contact</Link>
        
         </nav>
 
         {/* Download Button */}
-        <a
+        {/* <a
           href="/resume.pdf"
-          download="Iqra_Yasmeen_Resume.pdf"
+          download="Iqra.pdf"
           className="inline-flex items-center bg-indigo-500 text-white py-2 px-4 
                      rounded-lg shadow-md hover:bg-indigo-600 transition-all duration-300"
         >
@@ -53,8 +62,17 @@ function Navbar() {
           >
             <path d="M5 12h14M12 5l7 7-7 7"></path>
           </svg>
-        </a>
+        </a> */}
+        <button
+  onClick={handleDownload}
+  className="inline-flex items-center bg-indigo-500 text-white py-2 px-4 
+             rounded-lg shadow-md hover:bg-indigo-600 transition-all duration-300"
+>
+  Download Resume
+</button>
+
       </div>
+
     </header>
   );
 }
